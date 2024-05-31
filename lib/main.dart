@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'normal user/editprofile.dart';
 import 'normal user/login.dart';
 import 'normal user/normalProfileUser.dart';
+import 'normal user/nuAbout.dart';
 import 'normal user/nuChangePassword.dart';
+import 'normal user/nuHelp.dart';
 import 'normal user/nuSettings.dart';
 
 void main() {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NuserChngPsswrd(),
+      home: NormalusrAbt(),
     );
   }
 }
