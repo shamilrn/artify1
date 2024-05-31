@@ -37,9 +37,7 @@ class _normalUserSettingsState extends State<normalUserSettings> {
             ),
             child: Column(
               children: [
-                InkWell(onTap: (){},
-              child: TextFormField(),
-                ),
+                TextFormField(),
               ],
             ),
             ),
