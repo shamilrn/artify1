@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class premiumUserReg extends StatefulWidget {
-  const premiumUserReg({super.key});
+class premiumReg extends StatefulWidget {
+  const premiumReg({super.key});
 
   @override
-  State<premiumUserReg> createState() => _premiumUserRegState();
+  State<premiumReg> createState() => _premiumRegState();
 }
 
-class _premiumUserRegState extends State<premiumUserReg> {
+class _premiumRegState extends State<premiumReg> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(// backgroundColor: Colors.lightBlue,
@@ -70,16 +70,49 @@ class _premiumUserRegState extends State<premiumUserReg> {
                   SizedBox(
                     height: 7,
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Adress",
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Phone",
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Re-enter Password",
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
                   Container(
                     height: 50,
                     width: 200,
                     child: ElevatedButton(onPressed: (){},
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            side: BorderSide(color: Colors.black),
-                            borderRadius: BorderRadius.circular(30),
-                          ),
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(color: Colors.black),
+                          borderRadius: BorderRadius.circular(30),
+                        ),
                       ),
                       child: Text("Login", style: TextStyle(color: Colors.black,
                           fontSize: 20,
