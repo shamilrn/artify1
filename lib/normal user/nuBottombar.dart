@@ -19,7 +19,8 @@ class _nUbottomBarState extends State<nUbottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(bottomNavigationBar: BottomNavigationBar(
+    return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
       selectedFontSize: 0,
       items: [
       BottomNavigationBarItem(
