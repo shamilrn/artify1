@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-class NormalusrAbt extends StatefulWidget {
-  const NormalusrAbt({super.key});
+class PremUserAbout extends StatefulWidget {
+  const PremUserAbout({super.key});
 
   @override
-  State<NormalusrAbt> createState() => _NormalusrAbtState();
+  State<PremUserAbout> createState() => _PremUserAboutState();
 }
 
-class _NormalusrAbtState extends State<NormalusrAbt> {
+class _PremUserAboutState extends State<PremUserAbout> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return Scaffold(appBar: AppBar(
       backgroundColor: Colors.cyan,
       foregroundColor: Colors.white,
       title: Text(
@@ -30,7 +29,7 @@ class _NormalusrAbtState extends State<NormalusrAbt> {
             child: Text(
               "Artify: A digital world for music passionates",
               style: TextStyle(fontWeight: FontWeight.bold,
-              fontSize: 20
+                  fontSize: 20
               ),
             ),
           ),
