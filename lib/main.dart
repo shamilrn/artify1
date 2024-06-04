@@ -4,6 +4,8 @@ import 'normal user/editprofile.dart';
 import 'normal user/login.dart';
 import 'normal user/bottom bar/normalProfileUser.dart';
 import 'normal user/nuAbout.dart';
+import 'normal user/nuArtistAchievements.dart';
+import 'normal user/nuBookings.dart';
 import 'normal user/nuBottombar.dart';
 import 'normal user/nuChangePassword.dart';
 import 'normal user/nuHelp.dart';
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: nUbottomBar(),
+      home: norUSerBooking(),
     );
   }
 }
