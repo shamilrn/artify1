@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'admin/adminArtistList.dart';
+import 'admin/adminHome.dart';
+import 'admin/adminLogin.dart';
+import 'admin/adminUserList.dart';
 import 'normal user/editprofile.dart';
 import 'normal user/login.dart';
 import 'normal user/bottom bar/normalProfileUser.dart';
@@ -23,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: norUSerBooking(),
+      home: adminArtsList(),
     );
   }
 }

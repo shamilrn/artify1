@@ -11,17 +11,31 @@ class norUSerBooking extends StatefulWidget {
 class _norUSerBookingState extends State<norUSerBooking> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            "Bookings",
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-          ),
-          backgroundColor: Colors.redAccent,
-          foregroundColor: Colors.white,
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          "Bookings",
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         ),
+        backgroundColor: Colors.redAccent,
+        foregroundColor: Colors.white,
+      ),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.black
+              ),
+              height: 400,
+              width: 400,
+            ),
+          )
+        ],
       ),
     );
   }
