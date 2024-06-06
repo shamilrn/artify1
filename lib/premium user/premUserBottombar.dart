@@ -1,5 +1,6 @@
 import 'package:artisty1/premium%20user/premUser%20bottom%20bar/premUserHomepg.dart';
 import 'package:artisty1/premium%20user/premUser%20bottom%20bar/premUsrProfile.dart';
+import 'package:artisty1/premium%20user/premUser%20bottom%20bar/premUserChat.dart';
 import 'package:flutter/material.dart';
 
 class preUserBottombar extends StatefulWidget {
@@ -10,10 +11,11 @@ class preUserBottombar extends StatefulWidget {
 
 class _preUserBottombarState extends State<preUserBottombar> {
 
-  int selectedstate_ = 0;
+  int selectedstate_ = 1;
   List tabs_= [
     premUsrProfile(),
     PremUsrHmpg(),
+    puChat(),
   ];
 
   @override
@@ -30,6 +32,11 @@ class _preUserBottombarState extends State<preUserBottombar> {
             backgroundColor: Colors.cyan,
             label: "",
             icon: Icon(Icons.home, ),
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Colors.cyan,
+            label: "",
+            icon: Icon(Icons.chat, ),
           ),
         ],
         iconSize: 30,

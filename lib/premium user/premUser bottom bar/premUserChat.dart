@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
-class PremUsrHmpg extends StatefulWidget {
-  const PremUsrHmpg({super.key});
+class puChat extends StatefulWidget {
+  const puChat({super.key});
 
   @override
-  State<PremUsrHmpg> createState() => _PremUsrHmpgState();
+  State<puChat> createState() => _puChatState();
 }
 
-class _PremUsrHmpgState extends State<PremUsrHmpg> {
+class _puChatState extends State<puChat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Artist", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
-        centerTitle: true,
-        backgroundColor: Colors.redAccent,
-        foregroundColor: Colors.white,
+        title: Text("Messages", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+        actions: [
+          Icon(Icons.search),
+        ],
       ),
       body: ListView.separated(
         separatorBuilder:(context, index) =>
-            Divider(thickness: 3, color: Colors.white,),
+            Divider(thickness: 0, color: Colors.white,),
         itemCount: 3,
         itemBuilder: (BuildContext context, int index){
           return Padding(
@@ -52,11 +52,11 @@ class _PremUsrHmpgState extends State<PremUsrHmpg> {
                           fontSize: 17, fontWeight: FontWeight.bold),),
                       Row(
                         children: [
-                          Text("Dancer", style: TextStyle(fontSize: 12)),
+                          Text("message", style: TextStyle(fontSize: 12)),
                           SizedBox(
                             width: 7,
                           ),
-                          Text("3years exp", style: TextStyle(fontSize: 12)),
+                          // Text("3years exp", style: TextStyle(fontSize: 12)),
                         ],
                       ),
 
@@ -71,16 +71,16 @@ class _PremUsrHmpgState extends State<PremUsrHmpg> {
                   //   ),
                   //   child: Text("Ban"),
                   // ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  ElevatedButton(onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                    ),
-                    child: Text("Check"),
-                  ),
+                  // SizedBox(
+                  //   width: 10,
+                  // ),
+                  // ElevatedButton(onPressed: (){},
+                  //   style: ElevatedButton.styleFrom(
+                  //     backgroundColor: Colors.blue,
+                  //     foregroundColor: Colors.white,
+                  //   ),
+                  //   child: Text("Check"),
+                  // ),
                   SizedBox(
                     width: 10,
                   ),

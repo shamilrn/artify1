@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class PremUsrHmpg extends StatefulWidget {
-  const PremUsrHmpg({super.key});
+class premUsrSvdArts extends StatefulWidget {
+  const premUsrSvdArts({super.key});
 
   @override
-  State<PremUsrHmpg> createState() => _PremUsrHmpgState();
+  State<premUsrSvdArts> createState() => _premUsrSvdArtsState();
 }
 
-class _PremUsrHmpgState extends State<PremUsrHmpg> {
+class _premUsrSvdArtsState extends State<premUsrSvdArts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Artist", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+        title: Text("Saved  Artist", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
         centerTitle: true,
         backgroundColor: Colors.redAccent,
         foregroundColor: Colors.white,

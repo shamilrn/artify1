@@ -1,30 +1,46 @@
 import 'package:flutter/material.dart';
 
-class premUsrProfile extends StatefulWidget {
-  const premUsrProfile({super.key});
+class addAchieve extends StatefulWidget {
+  const addAchieve({super.key});
 
   @override
-  State<premUsrProfile> createState() => _premUsrProfileState();
+  State<addAchieve> createState() => _addAchieveState();
 }
 
-class _premUsrProfileState extends State<premUsrProfile> {
+class _addAchieveState extends State<addAchieve> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      appBar: AppBar(
+        backgroundColor: Colors.cyan,
+        foregroundColor: Colors.white,
+        title: Text(
+          "Add Achievements",
+          style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            height: 55,
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 350, 0),
+            child: Text("Content:",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             child: TextFormField(
-              keyboardType: TextInputType.numberWithOptions(),
               // controller: password,
               decoration: InputDecoration(
-                hintText: "9876543210",
+                hintText: "example",
                 // labelText: "Phone",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -37,15 +53,23 @@ class _premUsrProfileState extends State<premUsrProfile> {
             ),
           ),
           SizedBox(
-            height: 12,
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 365, 0),
+            child: Text("Title:",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             child: TextFormField(
               // controller: password,
               decoration: InputDecoration(
-                hintText: "example@email.com",
-                labelText: "Email",
+                hintText: "example",
+                // labelText: "Phone",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
                   borderSide: BorderSide(
@@ -57,35 +81,23 @@ class _premUsrProfileState extends State<premUsrProfile> {
             ),
           ),
           SizedBox(
-            height: 12,
+            height: 10,
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-            child: TextFormField(
-              // controller: password,
-              decoration: InputDecoration(
-                hintText: "Enter your place",
-                labelText: "Place",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                      color: Colors.black,
-                      style: BorderStyle.solid
-                  ),
-                ),
+            padding: const EdgeInsets.fromLTRB(0, 0, 350, 0),
+            child: Text("Link:",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold
               ),
             ),
           ),
-          SizedBox(
-            height: 12,
-          ),
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             child: TextFormField(
               // controller: password,
               decoration: InputDecoration(
-                hintText: "house no./flat no./street/ house name",
-                labelText: "Adress",
+                hintText: "example",
+                // labelText: "Phone",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
                   borderSide: BorderSide(
@@ -99,16 +111,17 @@ class _premUsrProfileState extends State<premUsrProfile> {
           Spacer(),
           Container(
             height: 50,
-            width: 325,
+            width: 200,
             child: ElevatedButton(onPressed: (){},
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.lightGreen,
+                  backgroundColor: Colors.cyan,
+                  foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.lightGreen),
-                    borderRadius: BorderRadius.circular(10),
+                    side: BorderSide(color: Colors.cyan),
+                    borderRadius: BorderRadius.circular(30),
                   )
               ),
-              child: Text("Saved Artists", style: TextStyle(color: Colors.white,
+              child: Text("Submit", style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
               ),
@@ -117,26 +130,6 @@ class _premUsrProfileState extends State<premUsrProfile> {
           SizedBox(
             height: 20,
           ),
-          Container(
-            height: 50,
-            width: 325,
-            child: ElevatedButton(onPressed: (){},
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.redAccent,
-                  shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.redAccent),
-                    borderRadius: BorderRadius.circular(10),
-                  )
-              ),
-              child: Text("Saved Artists", style: TextStyle(color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          )
         ],
       ),
     );

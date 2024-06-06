@@ -1,3 +1,4 @@
+import 'package:artisty1/premium%20user/premUserBottombar.dart';
 import 'package:artisty1/section.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ import 'admin/adminHome.dart';
 import 'admin/adminLogin.dart';
 import 'admin/adminUserList.dart';
 import 'admin/adminUserProfile.dart';
+import 'artists/artistEditProfile.dart';
 import 'artists/artistREg.dart';
 import 'artists/artsBtottomBar.dart';
 import 'normal user/editprofile.dart';
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: slctsection(),
+      home: artsEditPrfl(),
     );
   }
 }
