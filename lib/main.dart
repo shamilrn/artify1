@@ -9,6 +9,7 @@ import 'admin/adminLogin.dart';
 import 'admin/adminUserList.dart';
 import 'admin/adminUserProfile.dart';
 import 'artists/artistEditProfile.dart';
+import 'artists/artistEvents.dart';
 import 'artists/artistREg.dart';
 import 'artists/artsBtottomBar.dart';
 import 'normal user/editprofile.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: artsEditPrfl(),
+      home: artsEvents(),
     );
   }
 }
