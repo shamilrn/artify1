@@ -1,3 +1,4 @@
+import 'package:artisty1/section.dart';
 import 'package:flutter/material.dart';
 
 import 'admin/adminArtistList.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: artsRegtn(),
+      home: slctsection(),
     );
   }
 }
