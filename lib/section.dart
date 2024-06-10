@@ -11,55 +11,77 @@ class _slctsectionState extends State<slctsection> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
+      backgroundColor: Colors.teal.shade100,
+      extendBody: true,
+      extendBodyBehindAppBar: true,
+      resizeToAvoidBottomInset: false,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                "assets/images/young people in casual clothes standingsplash1.png"),
+          ),
+        ),
+        child: SizedBox(
+          child: Stack(
+            alignment: Alignment.center,
             children: [
-              SizedBox(
-                height: 200,
-              ),
               Container(
-                height: 250,
+                height: 400,
                 width: 400,
-                child: Image.network("https://static.vecteezy.com/system/resources/thumbnails/008/484/613/small_2x/musicians-cartoon-characters-playing-different-musical-instruments-and-performing-on-city-streets-flat-set-isolated-on-white-background-urban-artists-or-performers-street-musicians-free-vector.jpg"),
-              ),
-              Container(
-                height: 50,
-                width: 200,
-                child: ElevatedButton(onPressed: (){},
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.black),
-                        borderRadius: BorderRadius.circular(30),
-                      )
-                  ),
-                  child: Text("Artist", style: TextStyle(color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                  ),
+                decoration: BoxDecoration(
+                  color: Colors.teal.shade50.withOpacity(0.5),
                 ),
-              ),
-              SizedBox(
-                height: 12,
-              ),
-              Container(
-                height: 50,
-                width: 200,
-                child: ElevatedButton(onPressed: (){},
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.black),
-                        borderRadius: BorderRadius.circular(30),
-                      )
-                  ),
-                  child: Text("User", style: TextStyle(color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                  ),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 100,
+                    ),
+                    Container(
+                      height: 70,
+                      width: 200,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              side: BorderSide(
+                                color: Colors.black,
+                              ),
+                            ),
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.black),
+                        child: Text("Artist", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 70,
+                    ),
+                    Container(
+                      height: 70,
+                      width: 200,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              side: BorderSide(
+                                color: Colors.black,
+                              ),
+                            ),
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.black),
+                        child: Text("User", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
                 ),
-              ),
+              )
             ],
           ),
         ),
