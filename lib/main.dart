@@ -13,6 +13,7 @@ import 'artists/artistEvents.dart';
 import 'artists/artistREg.dart';
 import 'artists/artsBtottomBar.dart';
 import 'firstPage.dart';
+import 'loginScreen.dart';
 import 'normal user/editprofile.dart';
 import 'normal user/login.dart';
 import 'normal user/bottom bar/normalProfileUser.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: firtpg(),
+      home: mainLogin(),
     );
   }
 }
