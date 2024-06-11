@@ -1,6 +1,7 @@
 import 'package:artisty1/premium%20user/premUserBottombar.dart';
 import 'package:artisty1/section.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'admin/adminArtistList.dart';
 import 'admin/adminArtistProfile.dart';
@@ -11,6 +12,7 @@ import 'admin/adminUserProfile.dart';
 import 'artists/artistEditProfile.dart';
 import 'artists/artistEvents.dart';
 import 'artists/artistREg.dart';
+import 'artists/artists Bottom bar/artistProfile.dart';
 import 'artists/artsBtottomBar.dart';
 import 'firstPage.dart';
 import 'loginScreen.dart';
@@ -35,9 +37,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: artsRegtn(),
+      home: artsProfile(),
     );
   }
 }

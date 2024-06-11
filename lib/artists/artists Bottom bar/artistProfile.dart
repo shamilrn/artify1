@@ -11,155 +11,88 @@ class _artsProfileState extends State<artsProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Container(
-                height: 200,
-                width: 500,
-                decoration: BoxDecoration(
-                  color: Colors.blue.shade100,
+      backgroundColor: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            height: 200,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20.0),
+                bottomRight: Radius.circular(20.0),
+              ),
+                color: Colors.teal.shade300.withOpacity(0.5),
+                image: DecorationImage(
+                    image: AssetImage("assets/images/bgpatterns1.png"),
                 ),
-                child: Row(
+            ),
+            child:Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(300, 0, 0, 0),
+                  child: IconButton(onPressed: (){},
+                    icon: Icon(Icons.apps,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Row(
                   children: [
+                    SizedBox(
+                      width: 15,
+                    ),
+                    CircleAvatar(
+                      radius: 45,
+                      backgroundImage: AssetImage("assets/images/pfp1.png"),
+                    ),
                     SizedBox(
                       width: 20,
                     ),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/profile.jpg"),
-                      ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          child: Text("Amaleshwar", style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                          ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Text("Dancer", style: TextStyle(
+                            color: Colors.white,
+                              fontWeight: FontWeight.bold
+                            ),
+                            ),
+                            SizedBox(
+                              width: 7,
+                            ),
+                            Text("3 years exp", style: TextStyle(
+                            color: Colors.white,
+                              fontWeight: FontWeight.bold
+                            ),
+                            ),
+                          ],
+                        )
+                      ],
                     ),
-                    Spacer(),
-                    Text("Name", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
-                    Spacer(),
                   ],
                 ),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Container(
-              height: 50,
-              width: 150,
-              decoration: BoxDecoration(
-                color: Colors.blue.shade100,
-              ),
-              child: Row(
-                children: [
-                  Spacer(),
-                  Text("Dancer", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text("3years exp", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),),
-                  Spacer(),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                keyboardType: TextInputType.numberWithOptions(),
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "9876543210",
-                  hintStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-                  filled: true,
-                  fillColor: Colors.blue.shade100,
-                  // labelText: "Phone",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.blue.shade100,
-                        style: BorderStyle.solid
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                keyboardType: TextInputType.numberWithOptions(),
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "example@gmail.com",
-                  hintStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-                  filled: true,
-                  fillColor: Colors.blue.shade100,
-                  // labelText: "Phone",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.blue.shade100,
-                        style: BorderStyle.solid
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Row(
-              children: [
-                Spacer(),
-                Container(
-                  height: 50,
-                  width: 200,
-                  child: ElevatedButton(onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue.shade200,
-                      foregroundColor: Colors.white,
-                    ),
-                    child: Text("Events"),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 50,
-                  width: 200,
-                  child: ElevatedButton(onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue.shade200,
-                      foregroundColor: Colors.white,
-                    ),
-                    child: Text("Achievements"),
-                  ),
-                ),
-                Spacer(),
               ],
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              height: 50,
-              width: 200,
-              child: ElevatedButton(onPressed: (){},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red.shade200,
-                  foregroundColor: Colors.white,
-                ),
-                child: Text("Schedules"),
-              ),
-            ),
-          ],
-        ),
+          ),
+          SizedBox()
+
+
+
+        ],
       ),
     );
   }
