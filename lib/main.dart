@@ -12,6 +12,7 @@ import 'admin/adminUserProfile.dart';
 import 'artists/artistEditProfile.dart';
 import 'artists/artistEvents.dart';
 import 'artists/artistREg.dart';
+import 'artists/artistSettings.dart';
 import 'artists/artists Bottom bar/artistProfile.dart';
 import 'artists/artsBtottomBar.dart';
 import 'firstPage.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: artsProfile(),
+      home: artsSetting(),
     );
   }
 }
