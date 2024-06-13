@@ -9,6 +9,7 @@ import 'admin/adminHome.dart';
 import 'admin/adminLogin.dart';
 import 'admin/adminUserList.dart';
 import 'admin/adminUserProfile.dart';
+import 'artists/artistChangePass.dart';
 import 'artists/artistEditProfile.dart';
 import 'artists/artistEvents.dart';
 import 'artists/artistREg.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: artsSetting(),
+      home: artsChngPsswrd(),
     );
   }
 }
