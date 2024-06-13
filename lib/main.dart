@@ -1,4 +1,6 @@
+import 'package:artisty1/premium%20user/pUabout.dart';
 import 'package:artisty1/premium%20user/premUserBottombar.dart';
+import 'package:artisty1/premium%20user/puChangepasswrd.dart';
 import 'package:artisty1/section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,6 +14,7 @@ import 'admin/adminUserProfile.dart';
 import 'artists/artistChangePass.dart';
 import 'artists/artistEditProfile.dart';
 import 'artists/artistEvents.dart';
+import 'artists/artistHelp.dart';
 import 'artists/artistREg.dart';
 import 'artists/artistSettings.dart';
 import 'artists/artists Bottom bar/artistProfile.dart';
@@ -42,7 +45,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: artsChngPsswrd(),
+      home: PremUserAbout(),
     );
   }
 }
