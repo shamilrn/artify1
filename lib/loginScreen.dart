@@ -1,5 +1,8 @@
+import 'package:artisty1/section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'artists/artsBtottomBar.dart';
 
 class mainLogin extends StatefulWidget {
   const mainLogin({super.key});
@@ -32,7 +35,7 @@ class _mainLoginState extends State<mainLogin> {
               Image.asset(
                   "assets/images/Beige_Minimalist_Artistic_Logo___2_-removebg-preview 1.png"),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 450, 0, 0),
+                padding: const EdgeInsets.fromLTRB(12, 300, 12, 0),
                 child: Container(
                   height: 400,
                   width: 400,
@@ -80,7 +83,11 @@ class _mainLoginState extends State<mainLogin> {
                         height: 50,
                         width: 200,
                         child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>artsBottombar()
+                              ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40),

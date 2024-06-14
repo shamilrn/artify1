@@ -11,160 +11,99 @@ class _artsEditPrflState extends State<artsEditPrfl> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.redAccent,
-        foregroundColor: Colors.white,
-        title: Text(
-          "Edit Profile",
-          style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(onPressed: (){},
-            icon: Icon(Icons.done),)
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
+      backgroundColor: Colors.white,
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: Stack(
+          alignment: Alignment.topCenter,
           children: [
-            SizedBox(
-              height: 25,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Stack(
+            Container(
+              width: double.infinity,
+              height: 200,
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage("assets/images/bgpatterns1.png"),
+                ),
+                color: Colors.teal.shade200.withOpacity(0.5),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
-                      height: 150,
-                      width: 150,
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/download.jpg"),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(50, 110, 0, 0),
-                      child: Container(
-                        child: IconButton(onPressed: (){},
-                          icon: Icon(Icons.camera_alt_outlined),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundImage: AssetImage("assets/images/pfp1.png"),
                         ),
-                      ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Column(
+                          children: [
+                            Text("Amaleswar", style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                              color: Colors.white,
+                            ),
+                            ),
+                            Row(
+                              children: [
+                                Text("Dancer", style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),),
+                                Text("3 years Exp", style: TextStyle(
+                                color: Colors.white,
+                                  fontWeight: FontWeight.bold
+                                ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            // Padding(
-            //   padding: const EdgeInsets.fromLTRB(0, 0, 280, 0),
-            //   child: Text("Name:", style: TextStyle(
-            //       fontWeight: FontWeight.bold,
-            //       fontSize: 20
-            //   ),
-            //   ),
-            // ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "example",
-                  labelText: "Edit your payment",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid
-                    ),
-                  ),
-                ),
               ),
             ),
-            SizedBox(
-              height: 12,
-            ),
-            // Padding(
-            //   padding: const EdgeInsets.fromLTRB(0, 0, 280, 0),
-            //   child: Text("Email:", style: TextStyle(
-            //       fontWeight: FontWeight.bold,
-            //       fontSize: 20
-            //   ),
-            //   ),
-            // ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "example",
-                  labelText: "Edit your bio",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid
-                    ),
-                  ),
+              padding: const EdgeInsets.fromLTRB(0, 160, 0, 0),
+              child: Container(
+                width: double.infinity,
+                height: 500,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(60),
+                    bottomLeft: Radius.circular(60),
+                    topRight: Radius.circular(60),
+                    topLeft: Radius.circular(60),
+                  )
                 ),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            // Padding(
-            //   padding: const EdgeInsets.fromLTRB(0, 0, 280, 0),
-            //   child: Text("Phone:", style: TextStyle(
-            //       fontWeight: FontWeight.bold,
-            //       fontSize: 20
-            //   ),
-            //   ),
-            // ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "example",
-                  labelText: "Edit your username",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            // Padding(
-            //   padding: const EdgeInsets.fromLTRB(0, 0, 280, 0),
-            //   child: Text("Place:", style: TextStyle(
-            //       fontWeight: FontWeight.bold,
-            //       fontSize: 20
-            //   ),
-            //   ),
-            // ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "example",
-                  labelText: "Edit your Youtube account link",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid
-                    ),
-                  ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: "Name",
+                          labelText: "Edit your name",
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              style: BorderStyle.solid,
+                              color: Colors.grey,
+                            ),
+                            borderRadius: BorderRadius.circular(10)
+                          )
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),

@@ -1,4 +1,7 @@
+import 'package:artisty1/section.dart';
 import 'package:flutter/material.dart';
+
+import 'loginScreen.dart';
 
 class firtpg extends StatefulWidget {
   const firtpg({super.key});
@@ -23,13 +26,12 @@ class _firtpgState extends State<firtpg> {
                 child: Stack(
                   alignment: Alignment.bottomCenter,
                   children: [
-                   //  Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2lysfeLyE6WohadG43P0WPOHEx1NKLkeJBA&s",
-                   // height: 500,
-                   //   width: 350,
-                   //   alignment: Alignment.center,
+                   //  Image.asset("assets/images/mainimage1.png",
+                   //
+                   //   alignment: Alignment.topCenter,
                    // ),
-                    Image.network("https://cdn-icons-png.flaticon.com/512/12/12580.png",
-                    height: 320,
+                    Image.asset("assets/images/mainlogo.png",
+                    height: 300,
                       width: 260,
                       alignment: Alignment.bottomCenter,
                     ),
@@ -39,12 +41,24 @@ class _firtpgState extends State<firtpg> {
               SizedBox(
                 height: 70,
               ),
-              ElevatedButton(onPressed: (){},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.black,
+              Container(
+                height: 50,
+                width: 250,
+                child: ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>slctsection()
+                  ),
+                  );
+                },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    foregroundColor: Colors.black,
+                  ),
+                    child: Text("Get started!", style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30
+                    ),
+                    ),
                 ),
-                  child: Text("Get started!"),
               ),
               SizedBox(
                 height: 32,
@@ -58,7 +72,7 @@ class _firtpgState extends State<firtpg> {
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white,
                   fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: 25,
                   ),
                 ),
               )
