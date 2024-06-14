@@ -88,10 +88,153 @@ class _artsProfileState extends State<artsProfile> {
               ],
             ),
           ),
-          SizedBox()
+          SizedBox(height: 10,),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.orange.shade100,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                    ),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 1,
+                    ),
+                  ),
+                  width: double.infinity,
+                  height: 50,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text("Place", style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey,
+                      ),
+                      ),
+                      Spacer(),
+                      Text("Kochi", style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.orange.shade100,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                    ),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 1,
+                    ),
+                  ),
+                  width: double.infinity,
+                  height: 50,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text("Rating", style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey,
+                      ),
+                      ),
+                      Spacer(),
+                      Text("Kochi", style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+          SizedBox(),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
+            child: Row(
+              children: [
+                Stack(
+                  children: [Container(
 
-
-
+                    width: 160,
+                    height: 200,
+                    child: Image.asset("assets/images/eventimage.png",
+                    fit: BoxFit.fill,
+                    ),
+                  ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(5, 150, 0, 0),
+                      child: Container(
+                        height: 25,
+                        width: 150,
+                        child: ElevatedButton(onPressed: (){},
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.black,
+                            backgroundColor: Colors.orange.shade100,
+                          ),
+                            child: Text("Events"),
+                        ),
+                      ),
+                    ),
+            ],
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Stack(
+                  children: [Container(
+                    width: 160,
+                    height: 200,
+                    child: Image.asset("assets/images/achievementsimage.png",
+                    fit: BoxFit.fill,
+                    ) ,
+                  ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(5, 150, 0, 0),
+                      child: Container(
+                        height: 25,
+                        width: 150,
+                        child: ElevatedButton(onPressed: (){},
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.black,
+                            backgroundColor: Colors.orange.shade100,
+                          ),
+                          child: Text("Achievements"),
+                        ),
+                      ),
+                    ),
+      ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

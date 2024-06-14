@@ -12,7 +12,7 @@ class artsBottombar extends StatefulWidget {
 
 class _artsBottombarState extends State<artsBottombar> {
 
-  int selectedstate_ = 0;
+  int selectedstate_ = 1;
   List tabs_= [
     artsChats(),
     artsProfile(),
@@ -22,16 +22,19 @@ class _artsBottombarState extends State<artsBottombar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.red.shade50,
         selectedFontSize: 0,
         items: [
           BottomNavigationBarItem(
             backgroundColor: Colors.cyan,
             label: "",
-            icon: Icon(Icons.chat,),),
+            icon: Icon(Icons.chat,
+            color: Colors.red,),),
           BottomNavigationBarItem(
             backgroundColor: Colors.cyan,
             label: "",
-            icon: Icon(Icons.person, ),
+            icon: Icon(Icons.person,
+            color: Colors.red,),
           ),
         ],
         iconSize: 30,
