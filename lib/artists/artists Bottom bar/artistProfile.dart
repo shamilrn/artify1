@@ -172,7 +172,7 @@ class _artsProfileState extends State<artsProfile> {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
           SizedBox(),
