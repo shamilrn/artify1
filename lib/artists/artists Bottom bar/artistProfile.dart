@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../artistSchedules.dart';
 
 class artsProfile extends StatefulWidget {
   const artsProfile({super.key});
@@ -233,6 +236,49 @@ class _artsProfileState extends State<artsProfile> {
       ],
                 ),
               ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>artsSchedules()),);
+              },
+              child: Container(
+                width: double.infinity,
+                height: 70,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors:[
+                  Colors.purple,
+                  Colors.white
+                  ],
+                  ),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Schedule", style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                      color: Colors.white,
+                    ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(CupertinoIcons.clock, color: Colors.white,)
+                  ],
+                ),
+              ),
             ),
           ),
         ],
