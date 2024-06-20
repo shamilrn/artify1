@@ -1,6 +1,7 @@
 import 'package:artisty1/premium%20user/premiumReg.dart';
 import 'package:flutter/material.dart';
 
+import 'artists/artistLogin.dart';
 import 'artists/artistREg.dart';
 
 class slctsection extends StatefulWidget {
@@ -49,7 +50,7 @@ class _slctsectionState extends State<slctsection> {
                         width: 200,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>artsRegtn()
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>artsLogIn()
                             ),
                             );
                           },

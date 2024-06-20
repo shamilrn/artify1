@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../artistAchievements.dart';
+import '../artistEvents.dart';
 import '../artistSchedules.dart';
 
 class artsProfile extends StatefulWidget {
@@ -197,7 +199,9 @@ class _artsProfileState extends State<artsProfile> {
                       child: Container(
                         height: 25,
                         width: 150,
-                        child: ElevatedButton(onPressed: (){},
+                        child: ElevatedButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>artsEvents()),);
+                        },
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.black,
                             backgroundColor: Colors.orange.shade100,
@@ -224,7 +228,11 @@ class _artsProfileState extends State<artsProfile> {
                       child: Container(
                         height: 25,
                         width: 150,
-                        child: ElevatedButton(onPressed: (){},
+                        child: ElevatedButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>artsAchievements()
+                          ),
+                          );
+                        },
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.black,
                             backgroundColor: Colors.orange.shade100,

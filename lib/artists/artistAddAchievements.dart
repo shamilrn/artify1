@@ -11,126 +11,145 @@ class _addAchieveState extends State<addAchieve> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.cyan,
-        foregroundColor: Colors.white,
-        title: Text(
-          "Add Achievements",
-          style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold),
+      backgroundColor: Colors.white,
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: Stack(
+          alignment: Alignment.topCenter,
+          children: [
+            Container(
+              width: double.infinity,
+              height: 200,
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/images/bgpatterns1.png"),
+                  ),
+                  color: Colors.teal.shade200.withOpacity(0.3)
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: Text("Content ", style: TextStyle(fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white
+              ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 130, 0, 0),
+              child: Container(
+                width: double.infinity,
+                height: 700,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(60),
+                      bottomRight: Radius.circular(60),
+                      topLeft: Radius.circular(60),
+                      topRight: Radius.circular(60),
+                    )
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: Text("Title :", style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16
+                      ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            hintText: "Example",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.zero,
+                              borderSide: BorderSide(
+                                style: BorderStyle.solid,
+                                color: Colors.grey,
+                              ),
+                            )
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: Text("Link :", style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16
+                      ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            hintText: "Example",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.zero,
+                              borderSide: BorderSide(
+                                style: BorderStyle.solid,
+                                color: Colors.grey,
+                              ),
+                            )
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: Text("Re-enter New Password :", style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16
+                      ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            hintText: "Example",
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.zero,
+                              borderSide: BorderSide(
+                                style: BorderStyle.solid,
+                                color: Colors.grey,
+                              ),
+                            )
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 650, 0, 0),
+              child: Container(
+                height: 55,
+                width: 250,
+                child: ElevatedButton(onPressed: (){},
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.teal.shade50,
+
+                  ),
+                  child: Text("Submit", style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
-        centerTitle: true,
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 350, 0),
-            child: Text("Content:",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-            child: TextFormField(
-              // controller: password,
-              decoration: InputDecoration(
-                hintText: "example",
-                // labelText: "Phone",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                      color: Colors.black,
-                      style: BorderStyle.solid
-                  ),
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 365, 0),
-            child: Text("Title:",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-            child: TextFormField(
-              // controller: password,
-              decoration: InputDecoration(
-                hintText: "example",
-                // labelText: "Phone",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                      color: Colors.black,
-                      style: BorderStyle.solid
-                  ),
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 350, 0),
-            child: Text("Link:",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-            child: TextFormField(
-              // controller: password,
-              decoration: InputDecoration(
-                hintText: "example",
-                // labelText: "Phone",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                      color: Colors.black,
-                      style: BorderStyle.solid
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Spacer(),
-          Container(
-            height: 50,
-            width: 200,
-            child: ElevatedButton(onPressed: (){},
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.cyan,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.cyan),
-                    borderRadius: BorderRadius.circular(30),
-                  )
-              ),
-              child: Text("Submit", style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-        ],
       ),
     );
   }

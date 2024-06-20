@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../loginScreen.dart';
+import 'artistLogin.dart';
 
 class artsRegtn extends StatefulWidget {
   const artsRegtn({super.key});
@@ -109,7 +110,7 @@ class _artsRegtnState extends State<artsRegtn> {
                           height: 50,
                           width: 200,
                           child: ElevatedButton(onPressed: (){
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> mainLogin()
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> artsLogIn()
                             ),
                             );
                           },

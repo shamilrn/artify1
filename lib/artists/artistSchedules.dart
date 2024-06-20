@@ -10,6 +10,8 @@ class artsSchedules extends StatefulWidget {
 class _artsSchedulesState extends State<artsSchedules> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+
+    );
   }
 }
