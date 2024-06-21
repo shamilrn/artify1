@@ -1,18 +1,14 @@
-import 'package:artisty1/premium%20user/premiumReg.dart';
+import 'package:artisty1/premium%20user/pu_login.dart';
 import 'package:flutter/material.dart';
 
-import 'artists/artistLogin.dart';
-import 'artists/artistREg.dart';
-import 'pUserOrNuser.dart';
-
-class slctsection extends StatefulWidget {
-  const slctsection({super.key});
+class premUserOrNormlUsr extends StatefulWidget {
+  const premUserOrNormlUsr({super.key});
 
   @override
-  State<slctsection> createState() => _slctsectionState();
+  State<premUserOrNormlUsr> createState() => _premUserOrNormlUsrState();
 }
 
-class _slctsectionState extends State<slctsection> {
+class _premUserOrNormlUsrState extends State<premUserOrNormlUsr> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +47,7 @@ class _slctsectionState extends State<slctsection> {
                         width: 200,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>artsLogIn()
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>premiUserLogin()
                             ),
                             );
                           },
@@ -64,7 +60,7 @@ class _slctsectionState extends State<slctsection> {
                               ),
                               backgroundColor: Colors.white,
                               foregroundColor: Colors.black),
-                          child: Text("Artist", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                          child: Text("Premium User", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                         ),
                       ),
                       SizedBox(
@@ -75,9 +71,9 @@ class _slctsectionState extends State<slctsection> {
                         width: 200,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>premUserOrNormlUsr()
-                            ),
-                            );
+                            // Navigator.push(context, MaterialPageRoute(builder: (context)=>premiumReg()
+                            // ),
+                           // );
                           },
                           style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
@@ -88,7 +84,7 @@ class _slctsectionState extends State<slctsection> {
                               ),
                               backgroundColor: Colors.white,
                               foregroundColor: Colors.black),
-                          child: Text("User", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                          child: Text("Normal User", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                         ),
                       ),
                       SizedBox(

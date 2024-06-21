@@ -22,21 +22,29 @@ class _preUserBottombarState extends State<preUserBottombar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.red.shade50,
         selectedFontSize: 0,
         items: [
           BottomNavigationBarItem(
             backgroundColor: Colors.cyan,
             label: "",
-            icon: Icon(Icons.person,),),
-          BottomNavigationBarItem(
-            backgroundColor: Colors.cyan,
-            label: "",
-            icon: Icon(Icons.home, ),
+            icon: Icon(Icons.person,
+            color: Colors.red,
+            ),
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.cyan,
             label: "",
-            icon: Icon(Icons.chat, ),
+            icon: Icon(Icons.home,
+            color: Colors.red,
+            ),
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Colors.cyan,
+            label: "",
+            icon: Icon(Icons.chat,
+            color: Colors.red,
+            ),
           ),
         ],
         iconSize: 30,

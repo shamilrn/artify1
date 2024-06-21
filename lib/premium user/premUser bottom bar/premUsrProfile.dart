@@ -15,14 +15,37 @@ class _premUsrProfileState extends State<premUsrProfile> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Container(
+            height: 200,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.teal.shade200.withOpacity(0.5),
+              image: DecorationImage(image: AssetImage("assets/images/bgpatterns1.png"),
+              fit: BoxFit.fill
+              ),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30),
+              ),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                ),
+                Spacer(),
+                Text("Devanand",)
+              ],
+            ),
+          ),
           SizedBox(
             height: 55,
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             child: TextFormField(
-              keyboardType: TextInputType.numberWithOptions(),
-              // controller: password,
+              readOnly: true,
               decoration: InputDecoration(
                 hintText: "9876543210",
                 // labelText: "Phone",
@@ -42,7 +65,7 @@ class _premUsrProfileState extends State<premUsrProfile> {
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             child: TextFormField(
-              // controller: password,
+              readOnly: true,
               decoration: InputDecoration(
                 hintText: "example@email.com",
                 labelText: "Email",
@@ -62,7 +85,7 @@ class _premUsrProfileState extends State<premUsrProfile> {
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             child: TextFormField(
-              // controller: password,
+              readOnly: true,
               decoration: InputDecoration(
                 hintText: "Enter your place",
                 labelText: "Place",
@@ -82,7 +105,7 @@ class _premUsrProfileState extends State<premUsrProfile> {
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             child: TextFormField(
-              // controller: password,
+              readOnly: true,
               decoration: InputDecoration(
                 hintText: "house no./flat no./street/ house name",
                 labelText: "Adress",
