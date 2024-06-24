@@ -11,7 +11,7 @@ class nUbottomBar extends StatefulWidget {
 }
 
 class _nUbottomBarState extends State<nUbottomBar> {
-  int selectedstate_ = 0;
+  int selectedstate_ = 1;
   List tabs_= [
     normalProfileUser(),
     nUProfileHomepg(),
@@ -21,16 +21,19 @@ class _nUbottomBarState extends State<nUbottomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.red.shade50,
       selectedFontSize: 0,
       items: [
       BottomNavigationBarItem(
         backgroundColor: Colors.cyan,
         label: "",
-        icon: Icon(Icons.person,),),
+        icon: Icon(Icons.person,
+        color: Colors.red,),),
       BottomNavigationBarItem(
         backgroundColor: Colors.cyan,
         label: "",
-        icon: Icon(Icons.home, ),
+        icon: Icon(Icons.home,
+          color: Colors.red,),
       ),
     ],
       iconSize: 30,

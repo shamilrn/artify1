@@ -1,6 +1,8 @@
 import 'package:artisty1/premium%20user/pu_login.dart';
 import 'package:flutter/material.dart';
 
+import 'normal user/login.dart';
+
 class premUserOrNormlUsr extends StatefulWidget {
   const premUserOrNormlUsr({super.key});
 
@@ -71,9 +73,9 @@ class _premUserOrNormlUsrState extends State<premUserOrNormlUsr> {
                         width: 200,
                         child: ElevatedButton(
                           onPressed: () {
-                            // Navigator.push(context, MaterialPageRoute(builder: (context)=>premiumReg()
-                            // ),
-                           // );
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>normalUserLogin()
+                            ),
+                           );
                           },
                           style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(

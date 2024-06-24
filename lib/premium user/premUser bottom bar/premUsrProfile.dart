@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../premUserEditProfile.dart';
+import '../puSavedArtists.dart';
+
 class premUsrProfile extends StatefulWidget {
   const premUsrProfile({super.key});
 
@@ -31,11 +34,25 @@ class _premUsrProfileState extends State<premUsrProfile> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(
+                  width: 15,
+                ),
                 CircleAvatar(
                   radius: 50,
+                  backgroundImage: AssetImage("assets/images/Rectangle 52.png"),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Devanand", style: TextStyle(
+                color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
                 ),
                 Spacer(),
-                Text("Devanand",)
+                IconButton(onPressed: (){}, 
+                    icon: Icon(Icons.apps_rounded, color: Colors.white,))
               ],
             ),
           ),
@@ -123,7 +140,11 @@ class _premUsrProfileState extends State<premUsrProfile> {
           Container(
             height: 50,
             width: 325,
-            child: ElevatedButton(onPressed: (){},
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>premUsrSvdArts()
+              ),
+              );
+            },
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.lightGreen,
                   shape: RoundedRectangleBorder(
@@ -143,7 +164,10 @@ class _premUsrProfileState extends State<premUsrProfile> {
           Container(
             height: 50,
             width: 325,
-            child: ElevatedButton(onPressed: (){},
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>premUsrEdtPrfl()),)
+              ;
+            },
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.redAccent,
                   shape: RoundedRectangleBorder(
@@ -151,7 +175,7 @@ class _premUsrProfileState extends State<premUsrProfile> {
                     borderRadius: BorderRadius.circular(10),
                   )
               ),
-              child: Text("Saved Artists", style: TextStyle(color: Colors.white,
+              child: Text("Edit Profile", style: TextStyle(color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
               ),

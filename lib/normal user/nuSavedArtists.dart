@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class premUsrSvdArts extends StatefulWidget {
-  const premUsrSvdArts({super.key});
+class nUsrSvdArts extends StatefulWidget {
+  const nUsrSvdArts({super.key});
 
   @override
-  State<premUsrSvdArts> createState() => _premUsrSvdArtsState();
+  State<nUsrSvdArts> createState() => _nUsrSvdArtsState();
 }
 
-class _premUsrSvdArtsState extends State<premUsrSvdArts> {
+class _nUsrSvdArtsState extends State<nUsrSvdArts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _premUsrSvdArtsState extends State<premUsrSvdArts> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text("Saved Artist", style: TextStyle(
-            color: Colors.red,
+              color: Colors.red,
               fontWeight: FontWeight.bold,
               fontSize: 25,
             ),
@@ -49,7 +49,7 @@ class _premUsrSvdArtsState extends State<premUsrSvdArts> {
                     ),
                     subtitle: Text("Dancer  3yrs exp"),
                     subtitleTextStyle: TextStyle(
-                      color: Colors.grey
+                        color: Colors.grey
                     ),
                     trailing: ElevatedButton(onPressed: (){},
                         style: ElevatedButton.styleFrom(
@@ -58,7 +58,7 @@ class _premUsrSvdArtsState extends State<premUsrSvdArts> {
                         ),
                         child: Text("Check")),
                   );
-              },
+                },
               ),
             ),
           ],

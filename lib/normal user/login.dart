@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'nuBottombar.dart';
+import 'nuRegistration.dart';
+
 class normalUserLogin extends StatefulWidget {
   const normalUserLogin({super.key});
 
@@ -11,85 +14,109 @@ class _normalUserLoginState extends State<normalUserLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.lightBlue,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(32),
-              decoration: BoxDecoration(
-              //   image: DecorationImage(
-              //       // image: Image.asset("assets/images/download.jpg")),
-              ),
-              child: Column(
-                children: [
-                  Container(
-                    height: 300,
+      backgroundColor: Colors.teal.shade100,
+      extendBody: true,
+      extendBodyBehindAppBar: true,
+      resizeToAvoidBottomInset: false,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                "assets/images/old businessman in classical suit and glasses showing v sign.png"),
+          ),
+        ),
+        child: SizedBox(
+          child: Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              Image.asset(
+                  "assets/images/Beige_Minimalist_Artistic_Logo___2_-removebg-preview 1.png"),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 300, 12, 0),
+                child: Container(
+                  height: 400,
+                  width: 400,
+                  decoration: BoxDecoration(
+                    color: Colors.teal.shade50.withOpacity(0.5),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        hintText: "Username",
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 7,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        hintText: "Email",
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 7,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        hintText: "Password",
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    height: 50,
-                    width: 200,
-                    child: ElevatedButton(onPressed: (){},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(color: Colors.black),
-                          borderRadius: BorderRadius.circular(30),
-                        )
-                      ),
-                        child: Text("Login", style: TextStyle(color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: "Username",
+                          ),
                         ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 7,
-                  ),
-                  TextButton(onPressed: (){},
-                      child: Text("Sign Up", style: TextStyle(color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: "Email",
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: "Password",
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: "Type",
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        height: 50,
+                        width: 200,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>nUbottomBar()
+                            ),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40),
+                                side: BorderSide(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              backgroundColor: Colors.white,
+                              foregroundColor: Colors.black),
+                          child: Text("Login", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      TextButton(onPressed: (){
+                        Navigator.push(context, (MaterialPageRoute(builder: (context)=>nuReg()
+                        )
+                        ),
+                        );
+                      },
+                        child: Text("SignUp", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 15),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ),
-          ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

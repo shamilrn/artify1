@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../nuSavedArtists.dart';
+
 class nUProfileHomepg extends StatefulWidget {
   const nUProfileHomepg({super.key});
 
@@ -11,46 +13,58 @@ class _nUProfileHomepgState extends State<nUProfileHomepg> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("Artist", style: TextStyle(fontWeight: FontWeight.bold),),
-        backgroundColor: Colors.redAccent,
-        foregroundColor: Colors.white,
-      ),
-      body: SingleChildScrollView(
-        child: ListView.separated(
-            shrinkWrap: true,
-            separatorBuilder: (context, index) => Divider(
-              thickness: 3,
-              color: Colors.white,
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+        ),
+        height: double.infinity,
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text("Artist", style: TextStyle(
+              color: Colors.red,
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
             ),
-            itemCount: 3,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                leading: CircleAvatar(
-                  backgroundImage:AssetImage("assets/images/profile.jpg") ,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: ListView.separated(
+                shrinkWrap: true,
+                separatorBuilder: ( context,  index)=> Divider(
+                  thickness: 5,
+                  color: Colors.white,
                 ),
-                title: Text(
-                  "Name",
-                  style: TextStyle(fontSize: 15),
-                ),
-                trailing: Container(
-                  height: 30,
-                  width: 100,
-                  child: ElevatedButton(onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(color: Colors.blue),
-                          borderRadius: BorderRadius.circular(30),
-                        )
+                itemCount: 2,
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/pfp1.png"),
                     ),
-                      child: Text("Check"),
-                  ),
-                ),
-              );
-            }),
+                    title: Text("Name"),
+                    titleTextStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                    subtitle: Text("Dancer  3yrs exp"),
+                    subtitleTextStyle: TextStyle(
+                        color: Colors.grey
+                    ),
+                    trailing: ElevatedButton(onPressed: (){},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                          foregroundColor: Colors.white,
+                        ),
+                        child: Text("Check")),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

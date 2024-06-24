@@ -11,158 +11,178 @@ class _premUsrEdtPrflState extends State<premUsrEdtPrfl> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.redAccent,
-        foregroundColor: Colors.white,
-        title: Text(
-          "Edit Profile",
-          style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white,
         ),
-        centerTitle: true,
-        actions: [
-          IconButton(onPressed: (){},
-            icon: Icon(Icons.done),)
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
+        child: Stack(
+          alignment: Alignment.topCenter,
           children: [
-            SizedBox(
-              height: 25,
+            Container(
+              width: double.infinity,
+              height: 300,
+              decoration: BoxDecoration(
+                  color: Colors.red.withOpacity(0.5),
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/bgpatterns1.png"))),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Stack(
-                  children: [
-                    Container(
-                      height: 150,
-                      width: 150,
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/download.jpg"),
+            Padding(
+              padding: const EdgeInsets.only(top: 175),
+              child: Container(
+                width: double.infinity,
+                height: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(50),
+                    topRight: Radius.circular(50),
+                  ),
+                  color: Colors.white,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        top: 80
+                    ),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Name :", style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                          ),
+                          ),
+                          TextFormField(
+                            decoration: InputDecoration(
+                                hintText: "Example",
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  borderSide: BorderSide(
+                                    style: BorderStyle.solid,
+                                    color: Colors.grey,
+                                  ),
+                                )
+                            ),
+                          ),
+                          Text("Email :", style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                          ),
+                          ),
+                          TextFormField(
+                            decoration: InputDecoration(
+                                hintText: "Example",
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  borderSide: BorderSide(
+                                    style: BorderStyle.solid,
+                                    color: Colors.grey,
+                                  ),
+                                )
+                            ),
+                          ),
+                          Text("Mobile Number :", style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                          ),
+                          ),
+                          TextFormField(
+                            decoration: InputDecoration(
+                                hintText: "Example",
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  borderSide: BorderSide(
+                                    style: BorderStyle.solid,
+                                    color: Colors.grey,
+                                  ),
+                                )
+                            ),
+                          ),
+                          Text("Date of Birth :", style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                          ),
+                          ),
+                          TextFormField(
+                            decoration: InputDecoration(
+                                hintText: "Example",
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  borderSide: BorderSide(
+                                    style: BorderStyle.solid,
+                                    color: Colors.grey,
+                                  ),
+                                )
+                            ),
+                          ),
+                          Text("Place :", style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                          ),
+                          ),
+                          TextFormField(
+                            decoration: InputDecoration(
+                                hintText: "Example",
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  borderSide: BorderSide(
+                                    style: BorderStyle.solid,
+                                    color: Colors.grey,
+                                  ),
+                                )
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 35),
+                            child: SizedBox(
+                              height: 50,
+                              width: 250,
+                              child: ElevatedButton(onPressed: (){},
+                                style: ElevatedButton.styleFrom(
+                                  foregroundColor: Colors.white,
+                                  backgroundColor: Colors.red.withOpacity(0.5),
+                                ),
+                                child: Text("Submit", style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold
+                                ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(50, 110, 0, 0),
-                      child: Container(
-                        child: IconButton(onPressed: (){},
-                          icon: Icon(Icons.camera_alt_outlined),
-                        ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 100),
+              child: Stack(
+                children: [
+                  Container(
+                    height: 150,
+                    width: 150,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/Rectangle 52.png"),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 110, 0, 0),
+                    child: Container(
+                      child: IconButton(onPressed: (){},
+                        icon: Icon(Icons.camera_alt_outlined),
                       ),
                     ),
-                  ],
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 280, 0),
-              child: Text("Name:", style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
-              ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "example",
-                  // labelText: "Phone",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid
-                    ),
                   ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 280, 0),
-              child: Text("Email:", style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
-              ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "example",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 280, 0),
-              child: Text("Phone:", style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
-              ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "example",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 280, 0),
-              child: Text("Place:", style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
-              ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: TextFormField(
-                // controller: password,
-                decoration: InputDecoration(
-                  hintText: "example",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid
-                    ),
-                  ),
-                ),
+                ],
               ),
             ),
           ],
