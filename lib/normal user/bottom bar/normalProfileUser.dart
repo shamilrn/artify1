@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../editprofile.dart';
 import '../nuSavedArtists.dart';
+import '../nuSettings.dart';
 
 class normalProfileUser extends StatefulWidget {
   const normalProfileUser({super.key});
@@ -51,7 +52,11 @@ class _normalProfileUserState extends State<normalProfileUser> {
                 ),
                 ),
                 Spacer(),
-                IconButton(onPressed: (){},
+                IconButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>normalUserSettings()
+                  ),
+                  );
+                },
                     icon: Icon(Icons.apps_rounded, color: Colors.white,))
               ],
             ),
